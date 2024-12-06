@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика: Основы JavaScript</title>
+    <link rel="stylesheet" href="/css/style.css/">
+</head>
+<body>
+    <header>
+        <h1>Практика: Основы JavaScript</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="courses.html">Курсы</a>
+            <a href="course2.html">Основы JavaScript</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Задание 1: Массивы и их обработка</h2>
+        <p>Создайте массив чисел и найдите сумму всех чисел в массиве с помощью цикла. Выведите результат в консоль.</p>
+
+        <pre>
+            <code>
+                // Пример кода
+                let numbers = [1, 2, 3, 4, 5];
+                let sum = 0;
+
+                for (let i = 0; i < numbers.length; i++) {
+                    sum += numbers[i];
+                }
+
+                console.log("Сумма всех чисел: " + sum);
+            </code>
+        </pre>
+
+        <h3>Ваша программа:</h3>
+        <textarea id="userPracticeCode2" rows="6" cols="50">// Напишите свой код здесь</textarea>
+        <br><br>
+        <button onclick="checkPracticeSolution2()">Проверить решение</button>
+
+        <h4>Результат выполнения:</h4>
+        <pre id="practiceResult2"></pre>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Обучение программированию</p>
+    </footer>
+
+    <script>
+        function checkPracticeSolution2() {
+            const userCode = document.getElementById('userPracticeCode2').value.trim();
+            const resultElement = document.getElementById('practiceResult2');
+
+            const expectedSolution = `
+                let numbers = [1, 2, 3, 4, 5];
+                let sum = 0;
+
+                for (let i = 0; i < numbers.length; i++) {
+                    sum += numbers[i];
+                }
+
+                console.log("Сумма всех чисел: " + sum);
+            `;
+
+            if (userCode === expectedSolution.trim()) {
+                resultElement.textContent = 'Решение верное! Отлично!';
+            } else {
+                resultElement.textContent = 'Ошибка: попробуйте еще раз.';
+            }
+        }
+    </script>
+</body>
+</html>

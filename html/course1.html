@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы программирования</title>
+    <link rel="stylesheet" href="/css/style.css/">
+</head>
+<body>
+    <header>
+        <h1>Основы программирования</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="courses.html">Курсы</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Модуль 1: Введение в программирование</h2>
+        <p>В этом модуле мы познакомимся с основами программирования. Вы научитесь использовать переменные, операторы, условия и циклы для создания простых программ. Начнем с работы с переменными и базовыми типами данных.</p>
+
+        <h3>Задание 1: Переменные и операторы</h3>
+        <p>В JavaScript переменные используются для хранения данных. Давайте создадим несколько переменных и выведем их значения на экран.</p>
+
+        <pre>
+            <code>
+                // Пример кода
+                let x = 10; // Присваиваем переменной x значение 10
+                let y = 5;  // Присваиваем переменной y значение 5
+                let sum = x + y; // Сложение переменных
+
+                console.log("Сумма: " + sum); // Выводим сумму
+            </code>
+        </pre>
+
+        <!-- Практическое задание -->
+        <h3>Ваша программа:</h3>
+        <textarea id="userCode" rows="6" cols="50">// Напишите свой код здесь</textarea>
+        <br><br>
+        <button onclick="checkSolution()">Проверить решение</button>
+
+        <h4>Результат выполнения:</h4>
+        <pre id="result"></pre>
+
+        <h3>Задание 2: Условия</h3>
+        <p>Теперь давайте научимся использовать условия. Напишите программу, которая проверяет, является ли число четным или нечетным.</p>
+
+        <pre>
+            <code>
+                // Пример кода
+                let num = 4; // Пример числа
+
+                if (num % 2 === 0) {
+                    console.log(num + " - четное число");
+                } else {
+                    console.log(num + " - нечетное число");
+                }
+            </code>
+        </pre>
+
+        <!-- Практическое задание 2 -->
+        <h3>Ваша программа для проверки числа:</h3>
+        <textarea id="userCode2" rows="6" cols="50">// Напишите свой код здесь</textarea>
+        <br><br>
+        <button onclick="checkSolution2()">Проверить решение</button>
+
+        <h4>Результат выполнения:</h4>
+        <pre id="result2"></pre>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Обучение программированию</p>
+    </footer>
+
+    <script>
+        // Проверка первого задания
+        function checkSolution() {
+            const userCode = document.getElementById('userCode').value.trim();
+            const resultElement = document.getElementById('result');
+
+            const expectedSolution = `
+                let x = 10;
+                let y = 5;
+                let sum = x + y;
+
+                console.log("Сумма: " + sum);
+            `;
+
+            if (userCode === expectedSolution.trim()) {
+                resultElement.textContent = 'Решение верное! Отлично!';
+            } else {
+                resultElement.textContent = 'Ошибка: попробуйте еще раз.';
+            }
+        }
+
+        // Проверка второго задания
+        function checkSolution2() {
+            const userCode = document.getElementById('userCode2').value.trim();
+            const resultElement = document.getElementById('result2');
+
+            const expectedSolution = `
+                let num = 4;
+
+                if (num % 2 === 0) {
+                    console.log(num + " - четное число");
+                } else {
+                    console.log(num + " - нечетное число");
+                }
+            `;
+
+            if (userCode === expectedSolution.trim()) {
+                resultElement.textContent = 'Решение верное! Отлично!';
+            } else {
+                resultElement.textContent = 'Ошибка: попробуйте еще раз.';
+            }
+        }
+    </script>
+</body>
+</html>

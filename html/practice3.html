@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика: Алгоритмы и структуры данных</title>
+    <link rel="stylesheet" href="/css/style.css/">
+</head>
+<body>
+    <header>
+        <h1>Практика: Алгоритмы и структуры данных</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="courses.html">Курсы</a>
+            <a href="course3.html">Алгоритмы и структуры данных</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Задание 1: Пузырьковая сортировка</h2>
+        <p>Напишите программу, которая сортирует массив чисел по возрастанию с использованием пузырьковой сортировки. Выведите результат в консоль.</p>
+
+        <pre>
+            <code>
+                // Пример кода
+                let arr = [5, 3, 8, 4, 2];
+
+                for (let i = 0; i < arr.length; i++) {
+                    for (let j = 0; j < arr.length - 1; j++) {
+                        if (arr[j] > arr[j + 1]) {
+                            let temp = arr[j];
+                            arr[j] = arr[j + 1];
+                            arr[j + 1] = temp;
+                        }
+                    }
+                }
+
+                console.log(arr); // [2, 3, 4, 5, 8]
+            </code>
+        </pre>
+
+        <h3>Ваша программа:</h3>
+        <textarea id="userPracticeCode3" rows="6" cols="50">// Напишите свой код здесь</textarea>
+        <br><br>
+        <button onclick="checkPracticeSolution3()">Проверить решение</button>
+
+        <h4>Результат выполнения:</h4>
+        <pre id="practiceResult3"></pre>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Обучение программированию</p>
+    </footer>
+
+    <script>
+        function checkPracticeSolution3() {
+            const userCode = document.getElementById('userPracticeCode3').value.trim();
+            const resultElement = document.getElementById('practiceResult3');
+
+            const expectedSolution = `
+                let arr = [5, 3, 8, 4, 2];
+
+                for (let i = 0; i < arr.length; i++) {
+                    for (let j = 0; j < arr.length - 1; j++) {
+                        if (arr[j] > arr[j + 1]) {
+                            let temp = arr[j];
+                            arr[j] = arr[j + 1];
+                            arr[j + 1] = temp;
+                        }
+                    }
+                }
+
+                console.log(arr);
+            `;
+
+            if (userCode === expectedSolution.trim()) {
+                resultElement.textContent = 'Решение верное! Отлично!';
+            } else {
+                resultElement.textContent = 'Ошибка: попробуйте еще раз.';
+            }
+        }
+    </script>
+</body>
+</html>

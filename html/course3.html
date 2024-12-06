@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алгоритмы и структуры данных</title>
+    <link rel="stylesheet" href="/css/style.css/">
+</head>
+<body>
+    <header>
+        <h1>Алгоритмы и структуры данных</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="courses.html">Курсы</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Модуль 1: Введение в алгоритмы</h2>
+        <p>Алгоритмы и структуры данных — это основа любого программирования. В этом курсе мы рассмотрим основные алгоритмы, такие как сортировка, поиск, и различные структуры данных, такие как массивы, списки и деревья.</p>
+
+        <h3>Задание:</h3>
+        <p>Напишите алгоритм для сортировки массива чисел по возрастанию (используйте алгоритм пузырьковой сортировки).</p>
+
+        <pre>
+            <code>
+                // Пример кода
+                let arr = [5, 3, 8, 4, 2];
+
+                for (let i = 0; i < arr.length; i++) {
+                    for (let j = 0; j < arr.length - 1; j++) {
+                        if (arr[j] > arr[j + 1]) {
+                            let temp = arr[j];
+                            arr[j] = arr[j + 1];
+                            arr[j + 1] = temp;
+                        }
+                    }
+                }
+
+                console.log(arr); // [2, 3, 4, 5, 8]
+            </code>
+        </pre>
+
+        <!-- Практическое задание -->
+        <h3>Ваша сортировка:</h3>
+        <textarea id="userSortCode" rows="6" cols="50">// Напишите свой код здесь</textarea>
+        <br><br>
+        <button onclick="checkSortSolution()">Проверить решение</button>
+
+        <h4>Результат выполнения:</h4>
+        <pre id="sortResult"></pre>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Обучение программированию</p>
+    </footer>
+
+    <script>
+        function checkSortSolution() {
+            const userCode = document.getElementById('userSortCode').value.trim();
+            const resultElement = document.getElementById('sortResult');
+
+            // Проверяем, соответствует ли код решению
+            const expectedSolution = `
+                let arr = [5, 3, 8, 4, 2];
+                for (let i = 0; i < arr.length; i++) {
+                    for (let j = 0; j < arr.length - 1; j++) {
+                        if (arr[j] > arr[j + 1]) {
+                            let temp = arr[j];
+                            arr[j] = arr[j + 1];
+                            arr[j + 1] = temp;
+                        }
+                    }
+                }
+                console.log(arr); // [2, 3, 4, 5, 8]
+            `;
+
+            if (userCode === expectedSolution.trim()) {
+                resultElement.textContent = 'Решение верное! Отлично!';
+            } else {
+                resultElement.textContent = 'Ошибка: попробуйте еще раз.';
+            }
+        }
+    </script>
+</body>
+</html>

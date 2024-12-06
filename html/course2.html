@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы JavaScript</title>
+    <link rel="stylesheet" href="/css/style.css/">
+</head>
+<body>
+    <header>
+        <h1>Основы JavaScript</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="courses.html">Курсы</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Модуль 1: Введение в JavaScript</h2>
+        <p>JavaScript — это язык программирования, который используется для создания динамических веб-страниц. В этом курсе мы познакомимся с его основами: переменными, функциями, операторами, объектами и массивами.</p>
+
+        <h3>Задание:</h3>
+        <p>Напишите программу, которая выводит сообщение "Привет, мир!" в консоль.</p>
+
+        <pre>
+            <code>
+                // Пример кода
+                console.log("Привет, мир!");
+            </code>
+        </pre>
+
+        <!-- Практическое задание -->
+        <h3>Ваша программа:</h3>
+        <textarea id="userCode" rows="6" cols="50">// Напишите свой код здесь</textarea>
+        <br><br>
+        <button onclick="checkSolution()">Проверить решение</button>
+
+        <h4>Результат выполнения:</h4>
+        <pre id="result"></pre>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Обучение программированию</p>
+    </footer>
+
+    <script>
+        function checkSolution() {
+            const userCode = document.getElementById('userCode').value.trim();
+            const resultElement = document.getElementById('result');
+
+            // Проверяем, соответствует ли код заданию
+            if (userCode === 'console.log("Привет, мир!");') {
+                resultElement.textContent = 'Решение верное! Отлично!';
+            } else {
+                resultElement.textContent = 'Ошибка: попробуйте еще раз.';
+            }
+        }
+    </script>
+</body>
+</html>

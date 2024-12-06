@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика: Основы программирования</title>
+    <link rel="stylesheet" href="/css/style.css/">
+</head>
+<body>
+    <header>
+        <h1>Практика: Основы программирования</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="courses.html">Курсы</a>
+            <a href="course1.html">Основы программирования</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Задание 1: Переменные и математические операции</h2>
+        <p>Создайте две переменные и выполните с ними несколько математических операций: сложение, вычитание, умножение и деление. Выведите результаты в консоль.</p>
+
+        <pre>
+            <code>
+                // Пример кода
+                let a = 10;
+                let b = 5;
+                let sum = a + b;
+                let diff = a - b;
+                let prod = a * b;
+                let quot = a / b;
+
+                console.log("Сумма: " + sum);
+                console.log("Разница: " + diff);
+                console.log("Произведение: " + prod);
+                console.log("Частное: " + quot);
+            </code>
+        </pre>
+
+        <h3>Ваша программа:</h3>
+        <textarea id="userPracticeCode1" rows="6" cols="50">// Напишите свой код здесь</textarea>
+        <br><br>
+        <button onclick="checkPracticeSolution1()">Проверить решение</button>
+
+        <h4>Результат выполнения:</h4>
+        <pre id="practiceResult1"></pre>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Обучение программированию</p>
+    </footer>
+
+    <script>
+        function checkPracticeSolution1() {
+            const userCode = document.getElementById('userPracticeCode1').value.trim();
+            const resultElement = document.getElementById('practiceResult1');
+
+            const expectedSolution = `
+                let a = 10;
+                let b = 5;
+                let sum = a + b;
+                let diff = a - b;
+                let prod = a * b;
+                let quot = a / b;
+
+                console.log("Сумма: " + sum);
+                console.log("Разница: " + diff);
+                console.log("Произведение: " + prod);
+                console.log("Частное: " + quot);
+            `;
+
+            if (userCode === expectedSolution.trim()) {
+                resultElement.textContent = 'Решение верное! Отлично!';
+            } else {
+                resultElement.textContent = 'Ошибка: попробуйте еще раз.';
+            }
+        }
+    </script>
+</body>
+</html>
